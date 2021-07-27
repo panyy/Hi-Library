@@ -8,7 +8,7 @@ class BizInterceptor : HiInterceptor {
     override fun intercept(chain: HiInterceptor.Chain): Boolean {
         if (chain.isRequestPeriod) {
             val request = chain.request()
-            request.addHeader("auth-token", "lksjdfglkjsadflkjsdflkjsdfoieasdlfkjsld")
+            request.addHeader("auth-token", "MTU5Mjg1MDg3NDcwNw==")
         } else if (chain.response() != null) {
             HiLog.dt("BizInterceptor", chain.request().endPointUrl())
             HiLog.dt("BizInterceptor", chain.response()?.rawData)
